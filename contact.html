@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<title>Contact</title>
+<link href="webpage.css" rel="stylesheet" type="text/css">
+<script type='text/javascript'>
+ function validateForm()
+	{
+	 var a = document.forms['contactform']['fname'].value;
+		if (a=='')
+		{
+			alert('Name is required.');
+			return false;
+		}
+	 var b = document.forms['contactform']['email'].value;
+		if (b=='')
+		{
+			alert('Email is required.');
+			return false;
+		}
+	}
+</script>
+</head>
+<!--Javascript form validation-->
+<body background="gurren lagann landscape.png">
+<div class="banner">	
+<ul>
+	 <li><a href="index.html">Home</a></li>
+	 <li><a href="about.html">About Me</a></li>
+	 <li><a href="favourites.html">Favourites</a></li>
+	 <li><a href="contact.html">Contact</a></li>
+	</ul>
+	</div>
+<center>	
+<section class='form'>
+	<h1>Contact Me</h1>
+<div id="formtext">
+<form name='contactform' action="" method="POST" onsubmit='return validateForm()' >
+  <p>Name:<br>
+    <input type="text" name="fname">
+  </p>
+  <p>Email:
+    <br>
+    <input type="text" name="email">
+  </p>
+  <p>Gender:
+	<br><input type="radio" name="gender" value="Male"> Male
+    <br><input type="radio" name="gender" value="Female"> Female   
+  </p>
+  <p>Reason for contact:
+	 <br><input type="checkbox" name="reason" value="General"> General inquiry
+	 <br>
+	 <input type="checkbox" name="reason" value="Business"> Business-related inquiry
+     <br>
+     <input type="checkbox" name="reason" value="Academic"> Academic-related inquiry
+  </p>
+  <p>
+    Age:
+    <select name="age" id="select">
+		<option value="under 18">Under 18</option>
+		<option value="18-21">18-21</option>
+		<option value="22-30">22-30</option>
+		<option value="over 30">Over 30</option>
+    </select>
+  </p>
+  <p>
+    Are you a lecturer or a student?:
+    <select name="occupation" id="select2">
+		<option value="lecturer">Lecturer</option>
+		<option value="student">Student</option>
+		<option value="other">Other</option>
+    </select>
+  </p>
+  <p>Additional Comment:<br>
+   <textarea name="comment" rows='8' cols='80' wrap='true'>Sample</textarea>
+  </p>
+  <p>
+    <input type="reset" name="reset" id="reset" value="Reset">
+    <input type="submit" name="submit" id="submit" value="Submit">
+  </p>
+</form> 
+	</div>
+</section>
+</center>
+	<footer>
+	Made by Muhammad Izzan Bin Rozlan in 2022
+	</footer>
+</body>
+</html>
